@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>uk.co.noop</groupId>
+    <artifactId>tethys</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <themis.version>1.2.0</themis.version>
+        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>
+        <mockito-core.version>4.5.1</mockito-core.version>
+        <mockito-junit-jupiter.version>4.5.1</mockito-junit-jupiter.version>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>tethys</id>
+            <name>Tethys</name>
+            <url>https://maven.pkg.github.com/noop-co-uk/Tethys</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>tethys</id>
+            <url>https://maven.pkg.github.com/noop-co-uk/Tethys</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.co.noop</groupId>
+            <artifactId>themis</artifactId>
+            <version>${themis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter-api.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito-junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+    
+</project>
